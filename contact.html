@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Dream Click Photography | Book Your Session</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📷</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon"><i class="fas fa-camera"></i></div>
+        <div class="nav-logo-text">Dream<span>Click</span></div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-item">
+          <a href="index.html#services" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="services/wedding-photography.html">Wedding Photography</a></li>
+            <li><a href="services/pre-wedding-photography.html">Pre-Wedding Shoot</a></li>
+            <li><a href="services/corporate-photography.html">Corporate Photography</a></li>
+            <li><a href="services/event-photography.html">Event Photography</a></li>
+            <li><a href="services/portrait-photography.html">Portrait & Fashion</a></li>
+            <li><a href="services/birthday-photography.html">Birthday & Celebrations</a></li>
+          </ul>
+        </li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html" class="nav-cta active">Book Now</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-bg">
+      <img src="images/contact_hero.png" alt="Get in Touch">
+    </div>
+    <div class="page-header-overlay"></div>
+    <div class="container">
+      <p class="section-tag">Start Your Journey</p>
+      <h1 class="section-title">Get in Touch</h1>
+      <p class="section-subtitle">We are excited to hear about your dream wedding and how we can bring it to life.</p>
+    </div>
+  </header>
+
+  <section class="contact" style="background: var(--color-bg-primary);">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h2 class="section-title" style="text-align:left">Contact Details</h2>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-item-text">
+                <h4>Studio Address</h4>
+                <p>Lajpat Nagar-II, New Delhi</p>
+              </div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fas fa-phone-alt"></i></div>
+                <div class="contact-item-text">
+                  <h4>Call / WhatsApp</h4>
+                  <p>+91 98765 43210</p>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                <div class="contact-item-text">
+                  <h4>Email Us</h4>
+                  <p>hello@dreamclick.in</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper reveal">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" name="name" placeholder="Rahul Sharma" required>
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="you@example.com" required>
+              </div>
+            </div>
+            <div class="form-row triple">
+              <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" name="phone" placeholder="+91 98765" required>
+              </div>
+              <div class="form-group">
+                <label>Service</label>
+                <select name="service" required>
+                  <option value="" disabled selected>Select Service</option>
+                  <option>Wedding Photography</option>
+                  <option>Pre-Wedding Shoot</option>
+                  <option>Corporate Photography</option>
+                  <option>Personal Portrait</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Date</label>
+                <input type="date" name="date">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Tell Us About Your Event</label>
+              <textarea name="message" rows="3" placeholder="Briefly describe your dream event..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary" id="submitBtn">
+              <i class="fas fa-paper-plane"></i> Send Enquiry
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-logo">
+              <div class="nav-logo-icon"><i class="fas fa-camera"></i></div>
+              <div class="nav-logo-text">Dream<span>Click</span></div>
+            </a>
+            <p>Delhi NCR's premier photography studio capturing timeless moments of love, celebration, and joy since 2018. Every frame tells your story.</p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="social-link" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="index.html#services">Services</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services/wedding-photography.html">Wedding Photography</a></li>
+              <li><a href="services/pre-wedding-photography.html">Pre-Wedding Shoots</a></li>
+              <li><a href="services/corporate-photography.html">Corporate Events</a></li>
+              <li><a href="services/event-photography.html">Event Coverage</a></li>
+              <li><a href="services/portrait-photography.html">Portrait & Fashion</a></li>
+              <li><a href="services/birthday-photography.html">Birthday Parties</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Areas We Serve</h4>
+            <ul>
+              <li><a href="areas/wedding-photographer-in-delhi.html">Delhi (South & Central)</a></li>
+              <li><a href="areas/wedding-photographer-in-gurugram.html">Gurugram (Gurgaon)</a></li>
+              <li><a href="areas/wedding-photographer-in-noida.html">Noida & Greater Noida</a></li>
+              <li><a href="areas/wedding-photographer-in-ghaziabad.html">Ghaziabad & Indirapuram</a></li>
+              <li><a href="areas/wedding-photographer-in-faridabad.html">Faridabad</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Dream Click Photography. All Rights Reserved. Made with ❤️ in Delhi.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

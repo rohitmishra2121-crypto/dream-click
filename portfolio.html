@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Dream Click Photography | Our Best Work</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📷</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon"><i class="fas fa-camera"></i></div>
+        <div class="nav-logo-text">Dream<span>Click</span></div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="nav-item">
+          <a href="index.html#services" class="dropdown-toggle">Services <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="services/wedding-photography.html">Wedding Photography</a></li>
+            <li><a href="services/pre-wedding-photography.html">Pre-Wedding Shoot</a></li>
+            <li><a href="services/corporate-photography.html">Corporate Photography</a></li>
+            <li><a href="services/event-photography.html">Event Photography</a></li>
+            <li><a href="services/portrait-photography.html">Portrait & Fashion</a></li>
+            <li><a href="services/birthday-photography.html">Birthday & Celebrations</a></li>
+          </ul>
+        </li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="page-header-bg">
+      <img src="images/portfolio_hero.png" alt="Wedding Photography Portfolio">
+    </div>
+    <div class="page-header-overlay"></div>
+    <div class="container">
+      <p class="section-tag">The Art of Storytelling</p>
+      <h1 class="section-title">Our Wedding Collections</h1>
+      <p class="section-subtitle">A curation of our most romantic, cinematic, and breathtaking work.</p>
+    </div>
+  </header>
+
+  <section class="portfolio" style="background: var(--color-bg-primary);">
+    <div class="container">
+      
+      <!-- Portfolio Search & Controls -->
+      <div class="portfolio-toolbar reveal">
+        <div class="portfolio-search-box">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" id="portfolioSearch" placeholder="Search gallery by location, couple, style..." autocomplete="off">
+          <button id="clearSearchBtn" class="clear-search-btn" style="display:none;">&times;</button>
+        </div>
+
+        <div class="portfolio-filters">
+          <button class="portfolio-filter active" data-filter="all"><i class="fas fa-grid-2"></i> All</button>
+          <button class="portfolio-filter" data-filter="reels"><i class="fas fa-film"></i> Video Reels</button>
+          <button class="portfolio-filter" data-filter="wedding"><i class="fas fa-heart"></i> Wedding</button>
+          <button class="portfolio-filter" data-filter="prewedding"><i class="fas fa-camera"></i> Pre-Wedding</button>
+          <button class="portfolio-filter" data-filter="corporate"><i class="fas fa-briefcase"></i> Corporate</button>
+          <button class="portfolio-filter" data-filter="event"><i class="fas fa-glass-cheers"></i> Events</button>
+          <button class="portfolio-filter" data-filter="portrait"><i class="fas fa-user-ninja"></i> Portrait</button>
+        </div>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="portfolio-grid" id="portfolioGrid">
+        
+        <!-- Video Reel Item 1 -->
+        <div class="portfolio-item video-item large" data-category="reels" data-type="video" data-title="The Royal Celebration — Pooja & Aryan" data-location="Udaipur Palace & Delhi" data-camera="RED V-Raptor 8K" data-lens="35mm Anamorphic" data-video="https://assets.mixkit.co/videos/preview/mixkit-wedding-couple-walking-out-of-church-41584-large.mp4">
+          <img src="images/cinematic_wedding_reel.jpg" alt="Royal Wedding Cinematic Video Trailer">
+          <div class="video-badge"><i class="fas fa-video"></i> 4K Ultra HD • 03:45</div>
+          <div class="portfolio-item-overlay">
+            <div class="play-button-ring"><i class="fas fa-play"></i></div>
+            <h4>Pooja & Aryan's Royal Wedding Trailer</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Udaipur Palace & Delhi NCR</p>
+          </div>
+        </div>
+
+        <!-- Video Reel Item 2 -->
+        <div class="portfolio-item video-item" data-category="reels" data-type="video" data-title="Sunset Romance Pre-Wedding Film" data-location="Lake Palace, Udaipur" data-camera="Sony A7S III" data-lens="85mm f/1.4 GM" data-video="https://assets.mixkit.co/videos/preview/mixkit-young-couple-walking-in-a-park-holding-hands-41583-large.mp4">
+          <img src="images/cinematic_prewedding_reel.jpg" alt="Pre-Wedding Sunset Film">
+          <div class="video-badge"><i class="fas fa-video"></i> 4K Reel • 02:15</div>
+          <div class="portfolio-item-overlay">
+            <div class="play-button-ring"><i class="fas fa-play"></i></div>
+            <h4>Sunset Romance Pre-Wedding</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Lake City Heritage Balcony</p>
+          </div>
+        </div>
+
+        <!-- Photo Item 1 -->
+        <div class="portfolio-item" data-category="wedding" data-type="image" data-title="Empress Bridal Portrait" data-location="Oberoi Amarvilas, Agra" data-camera="Sony A7R V" data-lens="50mm f/1.2 GM">
+          <img src="images/wedding.png" alt="Royal Bride Portrait">
+          <div class="portfolio-item-overlay">
+            <h4>Empress Bridal Portrait</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Oberoi Amarvilas, Agra</p>
+          </div>
+        </div>
+
+        <!-- Photo Item 2 -->
+        <div class="portfolio-item" data-category="wedding" data-type="image" data-title="The Grand Reception Union" data-location="The Leela Palace, New Delhi" data-camera="Canon EOS R5" data-lens="24-70mm f/2.8L">
+          <img src="images/wedding_reception.png" alt="Grand Wedding Reception">
+          <div class="portfolio-item-overlay">
+            <h4>The Grand Reception Union</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Leela Palace, New Delhi</p>
+          </div>
+        </div>
+
+        <!-- Photo Item 3 -->
+        <div class="portfolio-item" data-category="prewedding" data-type="image" data-title="Heritage Courtyard Romance" data-location="Lodhi Garden & Tomb" data-camera="Sony A7IV" data-lens="85mm f/1.4">
+          <img src="images/couple_portrait.png" alt="Sunset Couple Portrait">
+          <div class="portfolio-item-overlay">
+            <h4>Heritage Courtyard Romance</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Lodhi Gardens, Delhi</p>
+          </div>
+        </div>
+
+        <!-- Photo Item 4 -->
+        <div class="portfolio-item" data-category="prewedding" data-type="image" data-title="Golden Hour Embrace" data-location="Humayun Tomb, Delhi" data-camera="Fujifilm GFX 100II" data-lens="110mm f/2">
+          <img src="images/prewedding.png" alt="Mughal Pre Wedding">
+          <div class="portfolio-item-overlay">
+            <h4>Golden Hour Embrace</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Mughal Heritage, Delhi</p>
+          </div>
+        </div>
+
+        <!-- Photo Item 5 -->
+        <div class="portfolio-item" data-category="corporate" data-type="image" data-title="Global Tech Leadership Summit" data-location="Cyber City, Gurugram" data-camera="Sony A7IV" data-lens="70-200mm f/2.8">
+          <img src="images/corporate.png" alt="Corporate Event">
+          <div class="portfolio-item-overlay">
+            <h4>Leadership Keynote Summit</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Cyber City, Gurugram</p>
+          </div>
+        </div>
+
+        <!-- Photo Item 6 -->
+        <div class="portfolio-item" data-category="event" data-type="image" data-title="Sparkle & Celebration Gala" data-location="Grand Hyatt, Noida" data-camera="Nikon Z9" data-lens="35mm f/1.4">
+          <img src="images/event.png" alt="Gala Night">
+          <div class="portfolio-item-overlay">
+            <h4>Sparkle & Celebration Gala</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Grand Hyatt, Noida</p>
+          </div>
+        </div>
+
+        <!-- Photo Item 7 -->
+        <div class="portfolio-item" data-category="portrait" data-type="image" data-title="Studio High-Fashion Editorial" data-location="Dream Click Master Studio" data-camera="Hasselblad X2D" data-lens="90mm f/2.5">
+          <img src="images/portrait.png" alt="Fashion Portrait">
+          <div class="portfolio-item-overlay">
+            <h4>High-Fashion Editorial</h4>
+            <p><i class="fas fa-camera"></i> Master Studio Shoot</p>
+          </div>
+        </div>
+
+        <!-- Photo Item 8 -->
+        <div class="portfolio-item" data-category="event" data-type="image" data-title="Intimate Birthday Celebration" data-location="Farmhouse, Chattarpur" data-camera="Sony A7C II" data-lens="35mm f/1.8">
+          <img src="images/birthday.png" alt="Birthday Party">
+          <div class="portfolio-item-overlay">
+            <h4>Joyous Birthday Moments</h4>
+            <p><i class="fas fa-map-marker-alt"></i> Chattarpur Farmhouse</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- No Results Message -->
+      <div id="noResults" class="no-results-msg" style="display:none;">
+        <i class="fas fa-search-minus"></i>
+        <h3>No matching gallery items found</h3>
+        <p>Try searching for different keywords or clear the filter.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== ADVANCED LIGHTBOX MODAL ===== -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-dialog">
+      <button class="lightbox-close" id="lightboxClose" title="Close (Esc)">&times;</button>
+      
+      <button class="lightbox-nav prev-btn" id="lightboxPrev" title="Previous Image (←)"><i class="fas fa-chevron-left"></i></button>
+      <button class="lightbox-nav next-btn" id="lightboxNext" title="Next Image (→)"><i class="fas fa-chevron-right"></i></button>
+
+      <div class="lightbox-media-container" id="lightboxMediaContainer">
+        <img src="" alt="Portfolio image" id="lightboxImg">
+        <video id="lightboxVideo" controls style="display:none; max-width:100%; max-height:75vh; border-radius:12px;"></video>
+      </div>
+
+      <!-- Lightbox Info Bar -->
+      <div class="lightbox-info-bar">
+        <div class="lightbox-info-main">
+          <h3 id="lightboxTitle">Image Title</h3>
+          <p id="lightboxLocation"><i class="fas fa-map-marker-alt"></i> Location</p>
+        </div>
+        <div class="lightbox-exif">
+          <span class="exif-badge" id="lightboxCamera"><i class="fas fa-camera"></i> Camera</span>
+          <span class="exif-badge" id="lightboxLens"><i class="fas fa-circle-dot"></i> Lens</span>
+          <span class="counter-badge" id="lightboxCounter">1 of 10</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="nav-logo">
+              <div class="nav-logo-icon"><i class="fas fa-camera"></i></div>
+              <div class="nav-logo-text">Dream<span>Click</span></div>
+            </a>
+            <p>Delhi NCR's premier photography studio capturing timeless moments of love, celebration, and joy since 2018. Every frame tells your story.</p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="social-link" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="index.html#services">Services</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services/wedding-photography.html">Wedding Photography</a></li>
+              <li><a href="services/pre-wedding-photography.html">Pre-Wedding Shoots</a></li>
+              <li><a href="services/corporate-photography.html">Corporate Events</a></li>
+              <li><a href="services/event-photography.html">Event Coverage</a></li>
+              <li><a href="services/portrait-photography.html">Portrait & Fashion</a></li>
+              <li><a href="services/birthday-photography.html">Birthday Parties</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Areas We Serve</h4>
+            <ul>
+              <li><a href="areas/wedding-photographer-in-delhi.html">Delhi (South & Central)</a></li>
+              <li><a href="areas/wedding-photographer-in-gurugram.html">Gurugram (Gurgaon)</a></li>
+              <li><a href="areas/wedding-photographer-in-noida.html">Noida & Greater Noida</a></li>
+              <li><a href="areas/wedding-photographer-in-ghaziabad.html">Ghaziabad & Indirapuram</a></li>
+              <li><a href="areas/wedding-photographer-in-faridabad.html">Faridabad</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Dream Click Photography. All Rights Reserved. Made with ❤️ in Delhi.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

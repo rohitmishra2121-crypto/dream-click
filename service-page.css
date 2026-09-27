@@ -1,0 +1,340 @@
+/* ===== SERVICE PAGE SPECIFIC STYLES ===== */
+
+/* SEO Content Section */
+.seo-article { padding: 80px 0; background: var(--color-bg-primary); }
+.seo-article .container { max-width: 900px; margin: 0 auto; }
+.seo-article h3 { font-family: var(--font-heading); color: var(--color-gold); font-size: 2rem; margin-bottom: 20px; margin-top: 50px; }
+.seo-article p, .seo-article ul { color: var(--color-text-light); font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px; }
+.seo-article ul { padding-left: 20px; }
+.seo-article li { margin-bottom: 10px; }
+
+/* Service Hero */
+.service-hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 260px; /* Force extra space for fixed navbar */
+}
+
+.service-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.service-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+  animation: heroZoom 20s ease infinite alternate;
+}
+
+@keyframes heroZoom {
+  0% { transform: scale(1.05); }
+  100% { transform: scale(1.12); }
+}
+
+.service-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 10, 15, 0.88) 0%,
+    rgba(10, 10, 15, 0.5) 50%,
+    rgba(10, 10, 15, 0.88) 100%
+  );
+  z-index: 1;
+}
+
+.service-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 40px 24px;
+}
+
+.service-hero-content .hero-tag {
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+
+.service-hero-content .hero-title {
+  opacity: 1;
+  transform: none;
+  animation: none;
+  font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+}
+
+.service-hero-content .hero-subtitle {
+  opacity: 1;
+  transform: none;
+  animation: none;
+  font-size: 1.05rem;
+}
+
+/* Breadcrumb */
+.service-hero-breadcrumb {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+.service-hero-breadcrumb a {
+  color: var(--color-text-secondary);
+  transition: var(--transition-fast);
+}
+
+.service-hero-breadcrumb a:hover {
+  color: var(--color-gold);
+}
+
+.service-hero-breadcrumb .current {
+  color: var(--color-gold);
+}
+
+.service-hero-breadcrumb span {
+  opacity: 0.4;
+}
+
+/* Overview Section */
+.service-overview {
+  padding: 120px 0;
+  background: var(--color-bg-secondary);
+  position: relative;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.overview-image {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.overview-image img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.overview-image:hover img {
+  transform: scale(1.03);
+}
+
+.overview-image-badge {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background: rgba(10, 10, 15, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--color-border-hover);
+  border-radius: 12px;
+  padding: 16px 24px;
+  text-align: center;
+}
+
+.badge-number {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-gold);
+  line-height: 1;
+}
+
+.badge-text {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+}
+
+/* Features Grid */
+.service-features {
+  padding: 120px 0;
+  background: var(--color-bg-primary);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.feature-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.feature-card:hover {
+  border-color: var(--color-border-hover);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-glow);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(212, 168, 83, 0.06);
+  border: 1px solid rgba(212, 168, 83, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.5rem;
+  color: var(--color-gold);
+}
+
+.feature-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* Ceremonies / Tags Section */
+.service-ceremonies {
+  padding: 100px 0;
+  background: var(--color-bg-secondary);
+}
+
+.ceremonies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.ceremony-item {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 28px 20px;
+  text-align: center;
+  transition: var(--transition-smooth);
+}
+
+.ceremony-item:hover {
+  border-color: var(--color-gold);
+  background: rgba(212, 168, 83, 0.04);
+  transform: translateY(-4px);
+}
+
+.ceremony-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.ceremony-item h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+/* Service Pricing */
+.service-pricing {
+  padding: 120px 0;
+  background: var(--color-bg-primary);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ceremonies-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .overview-grid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-hero {
+    min-height: 65vh;
+  }
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .overview-image {
+    order: -1;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .ceremonies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-hero-breadcrumb {
+    font-size: 0.72rem;
+    bottom: 20px;
+  }
+
+  .service-overview,
+  .service-features,
+  .service-ceremonies,
+  .service-pricing {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .ceremonies-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .ceremony-item {
+    padding: 20px 12px;
+  }
+
+  .service-hero-content .hero-title {
+    font-size: 2rem;
+  }
+}
