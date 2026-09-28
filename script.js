@@ -460,25 +460,47 @@ document.addEventListener('DOMContentLoaded', () => {
   let countersStarted = false;
 
   const animateCounters = () => {
-    statNumbers.forEach(stat => {
-      const target = parseInt(stat.dataset.count);
-      const duration = 2000;
-      const step = target / (duration / 16);
-      let current = 0;
+    if (countersStarted || statNumbers.length === 0) return;
+    countersStarted = true;
 
-      const updateCounter = () => {
-        current += step;
-        if (current < target) {
-          stat.textContent = Math.floor(current) + '+';
-          requestAnimationFrame(updateCounter);
+    statNumbers.forEach(stat => {
+      const target = parseInt(stat.dataset.count) || 0;
+      if (!target) return;
+
+      const duration = 1800;
+      const startTime = performance.now();
+
+      const step = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(easeOut * target);
+
+        stat.textContent = current.toLocaleString('en-IN') + '+';
+
+        if (progress < 1) {
+          requestAnimationFrame(step);
         } else {
-          stat.textContent = target + '+';
+          stat.textContent = target.toLocaleString('en-IN') + '+';
         }
       };
 
-      updateCounter();
+      requestAnimationFrame(step);
     });
   };
+
+  const checkStatsVisibility = () => {
+    const statsSection = document.querySelector('.stats');
+    if (statsSection && !countersStarted) {
+      const rect = statsSection.getBoundingClientRect();
+      if (rect.top <= window.innerHeight * 0.95 && rect.bottom >= 0) {
+        animateCounters();
+      }
+    }
+  };
+
+  window.addEventListener('scroll', checkStatsVisibility, { passive: true });
+  setTimeout(checkStatsVisibility, 300);
 
   // ===== SCROLL REVEAL ANIMATION =====
   const revealElements = document.querySelectorAll('.reveal');
@@ -489,16 +511,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
           
-          // Trigger counters when stats section is visible
           if (entry.target.closest('.stats') && !countersStarted) {
-            countersStarted = true;
             animateCounters();
           }
         }
       });
     }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      threshold: 0.05,
+      rootMargin: '50px 0px 50px 0px'
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
