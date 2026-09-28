@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', (e) => {
         // If it's a dropdown toggle on mobile, don't close the menu, just toggle the dropdown
-        if (window.innerWidth <= 768 && link.classList.contains('dropdown-toggle')) {
+        if (window.innerWidth <= 992 && link.classList.contains('dropdown-toggle')) {
           e.preventDefault();
           link.parentElement.classList.toggle('active');
           return;
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ===== RESIZE HANDLER =====
   window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 992) {
       if (hamburger) hamburger.classList.remove('active');
       if (navLinks) {
         navLinks.classList.remove('active');
