@@ -297,6 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const summaryCrew = document.getElementById('summaryCrew');
   const summaryAddons = document.getElementById('summaryAddons');
   const modalPackageSummary = document.getElementById('modalPackageSummary');
+  const openReserveModalBtn = document.getElementById('openReserveModalBtn');
 
   let currentAnimatedPrice = 90000;
 
